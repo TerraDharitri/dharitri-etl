@@ -5,132 +5,163 @@
     },
     {
         "name": "currentOwner",
-        "type": "STRING"
+        "type": "STRING",
+        "description": ""
     },
     {
         "name": "issuer",
-        "type": "STRING"
+        "type": "STRING",
+        "description": ""
     },
     {
         "name": "name",
-        "type": "STRING"
+        "type": "STRING",
+        "description": ""
     },
     {
         "name": "numDecimals",
-        "type": "NUMERIC"
+        "type": "NUMERIC",
+        "description": ""
     },
     {
         "name": "ownersHistory",
         "fields": [
             {
                 "name": "address",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "timestamp",
-                "type": "TIMESTAMP"
+                "type": "TIMESTAMP",
+                "description": ""
             }
         ],
-        "type": "RECORD"
+        "type": "RECORD",
+        "description": ""
     },
     {
         "name": "properties",
         "fields": [
             {
                 "name": "canAddSpecialRoles",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canBurn",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canChangeOwner",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canCreateMultiShard",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canFreeze",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canMint",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canPause",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canTransferNFTCreateRole",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canUpgrade",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             },
             {
                 "name": "canWipe",
-                "type": "BOOLEAN"
+                "type": "BOOLEAN",
+                "description": ""
             }
         ],
-        "type": "RECORD"
+        "type": "RECORD",
+        "description": ""
     },
     {
         "name": "roles",
         "fields": [
             {
                 "name": "DCDTRoleLocalBurn",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "DCDTRoleLocalMint",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "DCDTRoleNFTAddQuantity",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "DCDTRoleNFTAddURI",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "DCDTRoleNFTBurn",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "DCDTRoleNFTCreate",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "DCDTRoleNFTUpdateAttributes",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             },
             {
                 "name": "DCDTTransferRole",
-                "type": "STRING"
+                "type": "STRING",
+                "description": ""
             }
         ],
-        "type": "RECORD"
+        "type": "RECORD",
+        "description": ""
     },
     {
         "name": "ticker",
-        "type": "STRING"
+        "type": "STRING",
+        "description": ""
     },
     {
         "name": "timestamp",
-        "type": "TIMESTAMP"
+        "type": "TIMESTAMP",
+        "description": ""
     },
     {
         "name": "token",
-        "type": "STRING"
+        "type": "STRING",
+        "description": ""
     },
     {
         "name": "type",
-        "type": "STRING"
+        "type": "STRING",
+        "description": ""
     }
 ]

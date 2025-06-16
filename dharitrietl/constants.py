@@ -1,4 +1,10 @@
 SECONDS_IN_MINUTE = 60
-SECONDS_IN_DAY = 24 * 60 * SECONDS_IN_MINUTE
-INDICES_WITH_INTERVALS = ["accountsdcdt", "tokens", "blocks", "receipts", "transactions", "miniblocks", "rounds", "accountshistory", "scresults", "accountsdcdthistory", "scdeploys", "logs", "operations"]
-INDICES_WITHOUT_INTERVALS = list(set(["accounts", "rating", "validators", "epochinfo", "tags", "delegators"]) - set(["rating", "tags"]))
+SECONDS_IN_FIVE_MINUTES = 5 * SECONDS_IN_MINUTE
+SECONDS_IN_ONE_HOUR = 60 * SECONDS_IN_MINUTE
+SECONDS_IN_DAY = 24 * SECONDS_IN_ONE_HOUR
+SECONDS_IN_THIRTY_DAYS = 30 * SECONDS_IN_DAY
+SECONDS_IN_ONE_YEAR = 365 * SECONDS_IN_DAY
+END_TIME_DELTA = 1 * SECONDS_IN_MINUTE
+ELASTICSEARCH_MAX_RETRIES = 10
+# https://elasticsearch-py.readthedocs.io/en/v7.17.1/#thread-safety
+ELASTICSEARCH_CONNECTIONS_PER_NODE = 64

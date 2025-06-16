@@ -3,9 +3,9 @@ from typing import Any, Dict, List
 BQ_TYPE_BY_ES_TYPE: Dict[str, str] = {
     "boolean": "BOOLEAN",
     "long": "NUMERIC",
-    "double": "FLOAT64",
+    "double": "FLOAT",
     "integer": "NUMERIC",
-    "float": "FLOAT64",
+    "float": "FLOAT",
     "keyword": "STRING",
     "text": "STRING",
     "date": "TIMESTAMP"
@@ -36,6 +36,7 @@ def _map_field(name: str, input_metadata: Dict[str, Any]) -> Dict[str, Any]:
     is_object = input_metadata.get("isObject", False)
     is_array = input_metadata.get("isArray", False)
     input_type = input_metadata.get("type")
+    description = input_metadata.get("description", "")
 
     if is_object:
         nested_input_fields = input_metadata["properties"]
@@ -45,7 +46,8 @@ def _map_field(name: str, input_metadata: Dict[str, Any]) -> Dict[str, Any]:
             "name": name,
             **({"mode": "REPEATED"} if is_array else {}),
             "fields": nested_output_fields,
-            "type": "RECORD"
+            "type": "RECORD",
+            "description": description
         }
 
     assert input_type, f"Missing type for property: {name}; {input_metadata}"
@@ -54,12 +56,14 @@ def _map_field(name: str, input_metadata: Dict[str, Any]) -> Dict[str, Any]:
         return {
             "name": name,
             "mode": "REPEATED",
-            "type": _map_type(input_type)
+            "type": _map_type(input_type),
+            "description": description
         }
 
     return {
         "name": name,
-        "type": _map_type(input_type)
+        "type": _map_type(input_type),
+        "description": description
     }
 
 
